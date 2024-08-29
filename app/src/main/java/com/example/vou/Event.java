@@ -1,12 +1,12 @@
 package com.example.vou;
 
-public class HotEvent {
+public class Event {
     private int imageResourceId;
     private String eventName;
     private String eventSale;
 
     // Constructor
-    public HotEvent(int imageResourceId, String eventName, String eventDescription) {
+    public Event(int imageResourceId, String eventName, String eventDescription) {
         this.imageResourceId = imageResourceId;
         this.eventName = eventName;
         this.eventSale = eventDescription;

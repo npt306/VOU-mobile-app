@@ -3,8 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background_1">#F8B1C9</color>
+    <color name="background_2">#FDDBE7</color>
     <color name="login_button_1">#FF0077</color>
     <color name="login_button_2">#FFFFFF</color>
     <color name="login_signup_text">#2196F3</color>
     <color name="login_icon_color">#5D5D5D</color>
+    <color name="background_back_arrow_icon_1">#FF0077</color>
+    <color name="background_back_arrow_icon_2">#FAA1BF</color>
+    <color name="filter_option_1">#FFFFFF</color>
+    <color name="filter_option_2">#FF0077</color>
 </resources>

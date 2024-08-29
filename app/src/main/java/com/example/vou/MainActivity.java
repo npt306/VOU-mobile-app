@@ -2,6 +2,8 @@ package com.example.vou;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    ImageView ivHomeProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,13 +63,13 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerViewHomeHotVoucher = findViewById(R.id.recyclerViewHomeHotVoucher);
         recyclerViewHomeHotVoucher.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-        List<HotEvent> hotEvents = new ArrayList<>();
-        hotEvents.add(new HotEvent(R.drawable.logo_kfc, "KFC", "20% sale"));
-        hotEvents.add(new HotEvent(R.drawable.logo_lotteria, "Lotteria", "10% sale"));
-        hotEvents.add(new HotEvent(R.drawable.logo_mc_donald, "McDonald's", "15% sale"));
+        List<Event> events = new ArrayList<>();
+        events.add(new Event(R.drawable.logo_kfc, "KFC", "20% sale"));
+        events.add(new Event(R.drawable.logo_lotteria, "Lotteria", "10% sale"));
+        events.add(new Event(R.drawable.logo_mc_donald, "McDonald's", "15% sale"));
 
 
-        HomeHotEventAdapter adapterHomeHotEvent = new HomeHotEventAdapter(hotEvents);
+        HomeHotEventAdapter adapterHomeHotEvent = new HomeHotEventAdapter(events);
         recyclerViewHomeHotVoucher.setAdapter(adapterHomeHotEvent);
 
         SearchView searchViewVoucher = findViewById(R.id.searchViewVoucher);
@@ -82,6 +85,15 @@ public class MainActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
                 // Xử lý hành động khi người dùng nhập văn bản tìm kiếm
                 return false;
+            }
+        });
+
+        ivHomeProfile = findViewById(R.id.ivHomeProfile);
+        ivHomeProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MyVoucherActivity.class);
+                startActivity(intent);
             }
         });
 

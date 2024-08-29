@@ -27,5 +27,14 @@ public class SignupActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnSignupConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignupActivity.this, VerificationActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

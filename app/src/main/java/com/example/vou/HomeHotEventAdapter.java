@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class HomeHotEventAdapter extends RecyclerView.Adapter<HomeHotEventAdapter.HomeHotEventViewHolder> {
-    private List<HotEvent> hotEvents;
-    public HomeHotEventAdapter(List<HotEvent> hotEvents){
-        this.hotEvents =hotEvents;
+    private List<Event> events;
+    public HomeHotEventAdapter(List<Event> events){
+        this.events = events;
     }
     @Override
     public HomeHotEventViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
@@ -22,13 +22,13 @@ public class HomeHotEventAdapter extends RecyclerView.Adapter<HomeHotEventAdapte
     }
     @Override
     public void onBindViewHolder(HomeHotEventViewHolder holder, int position){
-        holder.event_image.setImageResource(hotEvents.get(position).getImageResourceId());
-        holder.event_name.setText(hotEvents.get(position).getEventName());
-        holder.event_sale.setText(hotEvents.get(position).getEventSale());
+        holder.event_image.setImageResource(events.get(position).getImageResourceId());
+        holder.event_name.setText(events.get(position).getEventName());
+        holder.event_sale.setText(events.get(position).getEventSale());
     }
     @Override
     public int getItemCount(){
-        return hotEvents.size();
+        return events.size();
     }
 
     public class HomeHotEventViewHolder extends RecyclerView.ViewHolder{

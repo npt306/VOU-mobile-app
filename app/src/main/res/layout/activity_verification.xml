@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_1"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_verification" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verification"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="You will get a  OTP via SMS"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/otpDigit1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_edittext_background"
+            android:layout_marginHorizontal="3dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/otpDigit2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_edittext_background"
+            android:layout_marginHorizontal="3dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/otpDigit3"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_edittext_background"
+            android:layout_marginHorizontal="3dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/otpDigit4"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_edittext_background"
+            android:layout_marginHorizontal="3dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnVerification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:background="@drawable/login_button_background"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Didn't receive verification OTP?"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#03A9F4"
+            android:text="Resend again"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

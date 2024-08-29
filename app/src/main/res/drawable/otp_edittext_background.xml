@@ -1,0 +1,21 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_focused="true">
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#FFFFFF" />
+        <corners android:radius="8dp" />
+        <stroke
+            android:width="2dp"
+            android:color="@color/login_button_1" />
+    </shape>
+</item>
+
+<item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#FFFFFF" />
+        <corners android:radius="8dp" />
+        <stroke
+            android:width="2dp"
+            android:color="#505050" />
+    </shape>
+</item>
+</selector>

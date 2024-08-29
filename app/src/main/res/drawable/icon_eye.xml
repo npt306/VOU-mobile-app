@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="25dp"
+    android:height="25dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+  <group>
+    <clip-path
+        android:pathData="M0,0h512v512h-512z"/>
+    <path
+        android:pathData="M256,96C149.33,96 58.24,162.35 21.33,256C58.24,349.65 149.33,416 256,416C362.77,416 453.76,349.65 490.67,256C453.76,162.35 362.77,96 256,96ZM256,362.67C197.12,362.67 149.33,314.88 149.33,256C149.33,197.12 197.12,149.33 256,149.33C314.88,149.33 362.67,197.12 362.67,256C362.67,314.88 314.88,362.67 256,362.67ZM256,192C220.69,192 192,220.69 192,256C192,291.31 220.69,320 256,320C291.31,320 320,291.31 320,256C320,220.69 291.31,192 256,192Z"
+        android:fillColor="@color/login_icon_color"/>
+  </group>
+</vector>

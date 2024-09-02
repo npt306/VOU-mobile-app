@@ -14,5 +14,7 @@
     <color name="filter_option_2">#FF0077</color>
     <color name="background_cart_1">#000000</color>
     <color name="background_cart_2">#5D5D5D</color>
+    <color name="background_copy_1">#FFFFFF</color>
+    <color name="background_copy_2">#5D5D5D</color>
 <!--    <color name="background_image_my_voucher">android.R.color.transparent</color>-->
 </resources>

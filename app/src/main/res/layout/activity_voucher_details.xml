@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_voucher_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_2">
+
+    <ImageView
+        android:id="@+id/voucherDetailBackButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/background_back_button"
+        android:layout_marginEnd="11dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Voucher detail" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voucher sale: "/>
+            <TextView
+                android:id="@+id/voucherDetailSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20%"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "/>
+            <TextView
+                android:id="@+id/voucherDetailDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bla bla bla"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expired date: "/>
+            <TextView
+                android:id="@+id/voucherDetailExpiredDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1/1/2024"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/voucherDetailCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_search_voucher_bar"
+                android:gravity="center"
+                android:text="ASDFGD"/>
+            <ImageView
+                android:id="@+id/voucherDetailCopy"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_copy"
+                android:background="@drawable/background_copy_button"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/voucherDetailGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_button_background"
+            android:text="Give a voucher"/>
+        <Button
+            android:id="@+id/voucherDetailQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_button_background"
+            android:text="QR"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -12,4 +12,7 @@
     <color name="background_back_arrow_icon_2">#FAA1BF</color>
     <color name="filter_option_1">#FFFFFF</color>
     <color name="filter_option_2">#FF0077</color>
+    <color name="background_cart_1">#000000</color>
+    <color name="background_cart_2">#5D5D5D</color>
+<!--    <color name="background_image_my_voucher">android.R.color.transparent</color>-->
 </resources>

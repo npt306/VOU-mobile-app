@@ -3,57 +3,61 @@ package com.example.vou;
 import java.util.Date;
 
 public class Voucher {
-    private String id;
-    private String brand;
-    private String sale;
-    private String description;
-    private Date expired_day;
+    private static final int VOUCHER_TYPE_1 = 1;
+    private static final int VOUCHER_TYPE_2 = 2;
+
+    private int id;
     private String code;
+    private String name;
+    private int image;
+    private String description;
+    private Date expiredDay;
     private int type;
-    private int total_pieces;
-    private int available_pieces;
+    private int idUser;
+    private String sale;
+    private boolean state;
+    private int idEvent;
+    private int totalPieces;
+    private int availablePieces;
 
-    public Voucher(String brand, String sale, String description, Date expired_day, String code){
-        this.brand = brand;
-        this.sale = sale;
-        this.description = description;
-        this.expired_day = expired_day;
+    public Voucher(String name, String code, String description, Date expiredDay, String sale){
+        this.id = 0;
         this.code = code;
-        this.type = 1;
-        this.total_pieces = 0;
-        this.available_pieces = 0;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getSale() {
-        return sale;
-    }
-
-    public void setSale(String sale) {
-        this.sale = sale;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
+        this.name = name;
+        this.image = R.drawable.icon_voucher_1;
         this.description = description;
+        this.expiredDay = expiredDay;
+        this.type = VOUCHER_TYPE_1;
+        this.idUser = 0;
+        this.sale = sale;
+        this.state = true;
+        this.idEvent = 0;
+        this.totalPieces = 0;
+        this.availablePieces = 0;
     }
 
-    public Date getExpired_day() {
-        return expired_day;
+    public Voucher(String name, String code, String description, Date expiredDay, String sale, int availablePieces, int totalPieces){
+        this.id = 0;
+        this.code = code;
+        this.name = name;
+        this.image = R.drawable.icon_voucher_2;
+        this.description = description;
+        this.expiredDay = expiredDay;
+        this.type = VOUCHER_TYPE_2;
+        this.idUser = 0;
+        this.sale = sale;
+        this.state = true;
+        this.idEvent = 0;
+        this.totalPieces = totalPieces;
+        this.availablePieces = availablePieces;
     }
 
-    public void setExpired_day(Date expired_day) {
-        this.expired_day = expired_day;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCode() {
@@ -64,6 +68,30 @@ public class Voucher {
         this.code = code;
     }
 
+    public int getImage() { return image; }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Date getExpiredDay(){return expiredDay;}
+
+    public String getExpiredDayString() {
+        return expiredDay.getDay() + "/" + expiredDay.getMonth() + "/" + expiredDay.getYear();
+    }
+
+    public void setExpiredDay(Date expiredDay) {
+        this.expiredDay = expiredDay;
+    }
+
     public int getType() {
         return type;
     }
@@ -72,19 +100,51 @@ public class Voucher {
         this.type = type;
     }
 
-    public int getTotal_pieces() {
-        return total_pieces;
+    public String getSale() {
+        return sale;
     }
 
-    public void setTotal_pieces(int total_pieces) {
-        this.total_pieces = total_pieces;
+    public void setSale(String sale) {
+        this.sale = sale;
     }
 
-    public int getAvailable_pieces() {
-        return available_pieces;
+    public boolean isState() {
+        return state;
     }
 
-    public void setAvailable_pieces(int available_pieces) {
-        this.available_pieces = available_pieces;
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
+    }
+
+    public int getIdEvent() {
+        return idEvent;
+    }
+
+    public void setIdEvent(int idEvent) {
+        this.idEvent = idEvent;
+    }
+
+    public int getTotalPieces() {
+        return totalPieces;
+    }
+
+    public void setTotalPieces(int totalPieces) {
+        this.totalPieces = totalPieces;
+    }
+
+    public int getAvailablePieces() {
+        return availablePieces;
+    }
+
+    public void setAvailablePieces(int availablePieces) {
+        this.availablePieces = availablePieces;
     }
 }

@@ -2,6 +2,7 @@ package com.example.vou;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -75,6 +76,15 @@ public class VoucherDetailActivity extends AppCompatActivity {
                 clipboard.setPrimaryClip(clip);
 
                 Toast.makeText(context, "Copied in clipboard", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        voucherDetailQR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, QRCodeActivity.class);
+                intent.putExtra("voucher", voucher);
+                context.startActivity(intent);
             }
         });
     }

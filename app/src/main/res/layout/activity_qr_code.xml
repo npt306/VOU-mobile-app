@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/my_voucher_activity"
+    android:id="@+id/qr_code_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_2">
@@ -51,7 +51,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/voucherDetailSale"
+                android:id="@+id/QRCodeVoucherSale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20%"/>

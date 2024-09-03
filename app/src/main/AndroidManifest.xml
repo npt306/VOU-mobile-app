@@ -26,6 +26,8 @@
         <activity android:name=".SignupActivity"/>
         <activity android:name=".MyVoucherActivity"/>
         <activity android:name=".VoucherDetailActivity"/>
+        <activity android:name=".QRCodeActivity"/>
+
     </application>
 
 </manifest>

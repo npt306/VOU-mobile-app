@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_profile_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_2">
+
+    <ImageView
+        android:id="@+id/editProfileBackButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/background_back_button"
+        android:layout_marginEnd="11dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="My voucher" />
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/edit_profile_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edittext_background"
+            android:drawableLeft="@drawable/icon_email"
+            android:drawablePadding="10dp"
+            android:text="Nguyen Huynh Phu Qui" />
+
+        <TextView
+            android:id="@+id/edit_profile_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edittext_background"
+            android:drawableLeft="@drawable/icon_email"
+            android:drawablePadding="10dp"
+            android:inputType="textEmailAddress"
+            android:text="nhpqui@gmail.com" />
+
+        <TextView
+            android:id="@+id/edit_profile_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edittext_background"
+            android:drawableLeft="@drawable/icon_email"
+            android:drawablePadding="10dp"
+            android:inputType="phone"
+            android:text="0123456789" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender: " />
+
+            <RadioGroup
+                android:id="@+id/genderRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/maleRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/femaleRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/otherRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/edit_profile_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edittext_background"
+            android:drawableLeft="@drawable/icon_email"
+            android:drawablePadding="10dp"
+            android:inputType="none"
+            android:focusable="false"
+            android:text="Select your birthday" />
+
+        <TextView
+            android:id="@+id/edit_profile_facebook_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_edittext_background"
+            android:drawableLeft="@drawable/icon_email"
+            android:drawablePadding="10dp"
+            android:inputType="none"
+            android:focusable="false"
+            android:text="Enter your Facebook account" />
+        
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/edit_profile_cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/login_button_background"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/edit_profile_update_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/login_button_background"
+                android:text="Update" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

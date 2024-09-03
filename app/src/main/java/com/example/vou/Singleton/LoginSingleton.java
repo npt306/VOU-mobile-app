@@ -1,4 +1,4 @@
-package com.example.vou;
+package com.example.vou.Singleton;
 
 
 public class LoginSingleton {

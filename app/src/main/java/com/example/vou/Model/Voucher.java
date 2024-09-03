@@ -1,8 +1,11 @@
-package com.example.vou;
+package com.example.vou.Model;
 
+import com.example.vou.R;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class Voucher {
+public class Voucher implements Serializable {
     private static final int VOUCHER_TYPE_1 = 1;
     private static final int VOUCHER_TYPE_2 = 2;
 

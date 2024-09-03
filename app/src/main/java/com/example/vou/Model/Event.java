@@ -1,4 +1,4 @@
-package com.example.vou;
+package com.example.vou.Model;
 
 public class Event {
     private int imageResourceId;

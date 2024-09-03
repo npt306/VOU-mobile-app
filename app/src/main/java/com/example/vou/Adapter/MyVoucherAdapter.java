@@ -1,17 +1,21 @@
-package com.example.vou;
+package com.example.vou.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.example.vou.R;
+import com.example.vou.Model.Voucher;
+import com.example.vou.VoucherDetailActivity;
 
 import java.util.List;
 
@@ -63,6 +67,7 @@ public class MyVoucherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     public class MyVoucherType1ViewHolder extends RecyclerView.ViewHolder{
         ImageView voucherImage, cartImage;
         TextView nameVoucher, saleVoucher, expiredDayVoucher;
+        LinearLayout voucherLayout;
         public MyVoucherType1ViewHolder(@NonNull View itemView){
             super(itemView);
             voucherImage = itemView.findViewById(R.id.item_voucher_type_1_image);
@@ -70,6 +75,7 @@ public class MyVoucherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             saleVoucher = itemView.findViewById(R.id.item_voucher_type_1_sale);
             expiredDayVoucher = itemView.findViewById(R.id.item_voucher_type_1_expired_day);
             cartImage = itemView.findViewById(R.id.item_voucher_type_1_use_now);
+            voucherLayout = itemView.findViewById(R.id.item_voucher_type_1);
         }
         public void bindData(Voucher data) {
             voucherImage.setImageResource(data.getImage());
@@ -82,11 +88,20 @@ public class MyVoucherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
                 }
             });
+            voucherLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, VoucherDetailActivity.class);
+                    intent.putExtra("voucher", data);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
     public class MyVoucherType2ViewHolder extends RecyclerView.ViewHolder{
         ImageView voucherImage, cartImage;
         TextView nameVoucher, saleVoucher, expiredDayVoucher, totalPiecesVoucher, availablePiecesVoucher;
+        LinearLayout voucherLayout;
         public MyVoucherType2ViewHolder(@NonNull View itemView){
             super(itemView);
             voucherImage = itemView.findViewById(R.id.item_voucher_type_2_image);
@@ -96,6 +111,7 @@ public class MyVoucherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             totalPiecesVoucher = itemView.findViewById(R.id.item_voucher_type_2_total_pieces);
             availablePiecesVoucher = itemView.findViewById(R.id.item_voucher_type_2_available_pieces);
             cartImage = itemView.findViewById(R.id.item_voucher_type_2_use_now);
+            voucherLayout = itemView.findViewById(R.id.item_voucher_type_2);
         }
         public void bindData(Voucher data) {
             voucherImage.setImageResource(data.getImage());
@@ -122,6 +138,14 @@ public class MyVoucherAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                     }
                 });
             }
+            voucherLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, VoucherDetailActivity.class);
+                    intent.putExtra("voucher", data);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

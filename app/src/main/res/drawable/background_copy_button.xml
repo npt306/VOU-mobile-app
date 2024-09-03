@@ -1,17 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <item android:state_checked="true">-->
+<!--        <shape>-->
+<!--            <solid android:color="@color/background_copy_2" />-->
+<!--            <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp"/>-->
+<!--            <corners android:radius="8dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item >-->
+<!--        <shape>-->
+<!--            <solid android:color="@color/background_copy_1" />-->
+<!--            <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp"/>-->
+<!--            <corners android:radius="8dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--</selector>-->
+
+
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="true">
-        <shape>
-            <solid android:color="@color/background_copy_2" />
-            <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp"/>
-            <corners android:radius="8dp" />
-        </shape>
-    </item>
-    <item >
-        <shape>
-            <solid android:color="@color/background_copy_1" />
-            <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp"/>
-            <corners android:radius="8dp" />
-        </shape>
-    </item>
+<item android:state_pressed="true">
+    <shape>
+        <solid android:color="@color/background_copy_2" />
+        <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp"/>
+        <corners android:radius="8dp" />
+    </shape>
+</item>
+
+<item>
+    <shape>
+        <solid android:color="@color/background_copy_1" />
+        <padding android:bottom="4dp" android:left="4dp" android:right="4dp" android:top="4dp"/>
+        <corners android:radius="8dp" />
+    </shape>
+</item>
 </selector>

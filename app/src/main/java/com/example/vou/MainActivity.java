@@ -15,6 +15,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.vou.Adapter.HomeBrandCategoryAdapter;
+import com.example.vou.Adapter.HomeHotEventAdapter;
+import com.example.vou.Adapter.HomeVoucherAdapter;
+import com.example.vou.Model.Event;
+import com.example.vou.Singleton.LoginSingleton;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

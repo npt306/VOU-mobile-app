@@ -18,15 +18,20 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.example.vou.Adapter.HomeBrandCategoryAdapter;
 import com.example.vou.Adapter.HomeHotEventAdapter;
 import com.example.vou.Adapter.HomeVoucherAdapter;
+import com.example.vou.Model.Brand;
 import com.example.vou.Model.Event;
 import com.example.vou.Singleton.LoginSingleton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Date;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     ImageView ivHomeProfile;
+    public static List<Brand> brandList = new ArrayList<>();
+    public static List<Event> eventList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,23 +64,50 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerViewHomeBrandCategory = findViewById(R.id.recyclerViewHomeBrandCategory);
         recyclerViewHomeBrandCategory.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        int[] images = {R.drawable.logo_kfc, R.drawable.logo_lotteria, R.drawable.logo_mc_donald, R.drawable.logo_starbucks, R.drawable.logo_jollibee, R.drawable.logo_pizza_hut, R.drawable.logo_highlands, R.drawable.logo_gong_cha};
-        String[] labels = {"KFC","Lotteria","McDonald's", "Starbucks", "Jollibee", "Pizza Hut", "Highlands", "Gong Cha"};
 
-        HomeBrandCategoryAdapter adapterHomeBrandCategory = new HomeBrandCategoryAdapter(images,labels);
+        brandList.add(new Brand(1, "KFC", "Fast Food", "123 Main St, District 1", "10.7769, 106.7009", true, "contact@kfc.com", R.drawable.logo_kfc));
+        brandList.add(new Brand(2, "Lotteria", "Fast Food", "456 Nguyen Hue, District 1", "10.7769, 106.7010", true, "contact@lotteria.com", R.drawable.logo_lotteria));
+        brandList.add(new Brand(3, "McDonald's", "Fast Food", "789 Le Duan, District 1", "10.7770, 106.7011", true, "contact@mcdonalds.com", R.drawable.logo_mc_donald));
+        brandList.add(new Brand(4, "Starbucks", "Coffee", "321 Hai Ba Trung, District 3", "10.7771, 106.7012", true, "contact@starbucks.com", R.drawable.logo_starbucks));
+        brandList.add(new Brand(5, "Jollibee", "Fast Food", "654 Tran Hung Dao, District 5", "10.7772, 106.7013", true, "contact@jollibee.com", R.drawable.logo_jollibee));
+        brandList.add(new Brand(6, "Pizza Hut", "Pizza", "987 Pham Ngu Lao, District 1", "10.7773, 106.7014", true, "contact@pizzahut.com", R.drawable.logo_pizza_hut));
+        brandList.add(new Brand(7, "Highlands", "Coffee", "159 Dong Khoi, District 1", "10.7774, 106.7015", true, "contact@highlandscoffee.com", R.drawable.logo_highlands));
+        brandList.add(new Brand(8, "Gong Cha", "Bubble Tea", "753 Ly Tu Trong, District 1", "10.7775, 106.7016", true, "contact@gongcha.com", R.drawable.logo_gong_cha));
+
+        HomeBrandCategoryAdapter adapterHomeBrandCategory = new HomeBrandCategoryAdapter(brandList, MainActivity.this);
         recyclerViewHomeBrandCategory.setAdapter(adapterHomeBrandCategory);
 
 
         RecyclerView recyclerViewHomeHotVoucher = findViewById(R.id.recyclerViewHomeHotVoucher);
         recyclerViewHomeHotVoucher.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-        List<Event> events = new ArrayList<>();
-        events.add(new Event(R.drawable.logo_kfc, "KFC", "20% sale"));
-        events.add(new Event(R.drawable.logo_lotteria, "Lotteria", "10% sale"));
-        events.add(new Event(R.drawable.logo_mc_donald, "McDonald's", "15% sale"));
+        Calendar calendar = Calendar.getInstance();
 
+        calendar.set(2024, Calendar.SEPTEMBER, 10);
+        Date startDate1 = calendar.getTime();
+        calendar.set(2024, Calendar.SEPTEMBER, 20);
+        Date endDate1 = calendar.getTime();
 
-        HomeHotEventAdapter adapterHomeHotEvent = new HomeHotEventAdapter(events);
+        calendar.set(2024, Calendar.OCTOBER, 1);
+        Date startDate2 = calendar.getTime();
+        calendar.set(2024, Calendar.OCTOBER, 15);
+        Date endDate2 = calendar.getTime();
+
+        calendar.set(2024, Calendar.NOVEMBER, 5);
+        Date startDate3 = calendar.getTime();
+        calendar.set(2024, Calendar.NOVEMBER, 25);
+        Date endDate3 = calendar.getTime();
+
+        eventList.add(new Event(1, "KFC Golden Week", "Get amazing discounts at KFC!", R.drawable.logo_kfc, 100, 20, startDate1, endDate1, 1, 101, "Buy 1 get 1 free on selected items.", Arrays.asList(1001, 1002, 1003)));
+        eventList.add(new Event(2, "Lotteria Mega Deal", "Special offers at Lotteria.", R.drawable.logo_lotteria, 200, 50, startDate1, endDate1, 2, 102, "Up to 50% off on all meals.", Arrays.asList(1004, 1005, 1006)));
+        eventList.add(new Event(3, "McDonald's Happy Days", "Enjoy delicious meals at McDonald's.", R.drawable.logo_mc_donald, 150, 30, startDate2, endDate2, 3, 103, "Free fries with any burger purchase.", Arrays.asList(1007, 1008, 1009)));
+        eventList.add(new Event(4, "Starbucks Coffee Lover", "Exclusive discounts for coffee lovers.", R.drawable.logo_starbucks, 250, 100, startDate2, endDate2, 4, 104, "Buy any coffee and get a second one at 50% off.", Arrays.asList(1010, 1011, 1012)));
+        eventList.add(new Event(5, "Jollibee Family Feast", "Big savings for the whole family at Jollibee.", R.drawable.logo_jollibee, 120, 25, startDate1, endDate2, 5, 105, "Family meal deal with extra sides.", Arrays.asList(1013, 1014, 1015)));
+        eventList.add(new Event(6, "Pizza Hut Double Deal", "Get two large pizzas at a special price.", R.drawable.logo_pizza_hut, 180, 40, startDate2, endDate3, 6, 106, "Order any large pizza and get the second one at 50% off.", Arrays.asList(1016, 1017, 1018)));
+        eventList.add(new Event(7, "Highlands Coffee Fest", "Enjoy a variety of coffees at Highlands.", R.drawable.logo_highlands, 220, 60, startDate3, endDate3, 7, 107, "Buy one, get one free on selected coffee.", Arrays.asList(1019, 1020, 1021)));
+        eventList.add(new Event(8, "Gong Cha Bubble Mania", "Special offers on bubble tea at Gong Cha.", R.drawable.logo_gong_cha, 140, 35, startDate3, endDate3, 8, 108, "Get a free topping with any drink.", Arrays.asList(1022, 1023, 1024)));
+
+        HomeHotEventAdapter adapterHomeHotEvent = new HomeHotEventAdapter(eventList);
         recyclerViewHomeHotVoucher.setAdapter(adapterHomeHotEvent);
 
         SearchView searchViewVoucher = findViewById(R.id.searchViewVoucher);

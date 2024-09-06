@@ -1,9 +1,10 @@
 package com.example.vou.Model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class Event {
+public class Event implements Serializable {
     private int id;
     private  String name;
     private String short_description;
@@ -100,6 +101,14 @@ public class Event {
 
     public Date getStart_date() {
         return start_date;
+    }
+
+    public String getStart_date2() {
+        return start_date.getDate() + "/" + start_date.getMonth() + "/" +start_date.getYear();
+    }
+
+    public String getEnd_date2() {
+        return end_date.getDate() + "/" + end_date.getMonth() + "/" +end_date.getYear();
     }
 
     public void setStart_date(Date start_date) {

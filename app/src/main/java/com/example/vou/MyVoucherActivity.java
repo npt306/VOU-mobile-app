@@ -45,7 +45,7 @@ public class MyVoucherActivity extends AppCompatActivity {
         myVoucherBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("My Voucher", "Back button pressed");
+                finish();
             }
         });
 

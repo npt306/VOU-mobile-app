@@ -1,5 +1,6 @@
 package com.example.vou.Adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.vou.EventDetailActivity;
+import com.example.vou.GameShakePhoneActivity;
 import com.example.vou.Model.Event;
 import com.example.vou.Model.Game;
 import com.example.vou.Model.Voucher;
@@ -23,19 +26,21 @@ import java.util.List;
 public class BrandEventAdapter extends RecyclerView.Adapter<BrandEventAdapter.BrandEventViewHolder>{
 
     private List<Event> brandEvents;
-    public BrandEventAdapter(List<Event> brandEvents) {
+    private static Context context;
+    public BrandEventAdapter(List<Event> brandEvents, Context context) {
         this.brandEvents = brandEvents;
+        this.context = context;
     }
 
     @Override
-    public BrandEventAdapter.BrandEventViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BrandEventViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.brand_event_item, parent, false);
-        return new BrandEventAdapter.BrandEventViewHolder(view);
+        return new BrandEventViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(BrandEventAdapter.BrandEventViewHolder holder, int position) {
-        ((BrandEventAdapter.BrandEventViewHolder) holder).bindData((Event) brandEvents.get(position));
+    public void onBindViewHolder(BrandEventViewHolder holder, int position) {
+        ((BrandEventViewHolder) holder).bindData((Event) brandEvents.get(position));
     }
 
     @Override
@@ -65,7 +70,15 @@ public class BrandEventAdapter extends RecyclerView.Adapter<BrandEventAdapter.Br
             brandEventPlayNow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Intent intent = null;
+                    if(data.getGame_id() == 1){
 
+                    }
+                    else if(data.getGame_id() == 2){
+                        intent = new Intent(context, GameShakePhoneActivity.class);
+                        intent.putExtra("event_data", data);
+                        context.startActivity(intent);
+                    }
                 }
             });
         }

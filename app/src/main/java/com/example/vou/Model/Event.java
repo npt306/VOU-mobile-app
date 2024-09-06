@@ -14,10 +14,11 @@ public class Event {
     private Date end_date;
     private int brand_id;
     private int game_id;
+    private int num_of_turn;
     private String guideline;
     private List<Integer> voucherIdList;
 
-    public Event(int id, String name, String short_description, int image, int voucher_quantity, int voucher_use, Date start_date, Date end_date, int brand_id, int game_id, String guideline, List<Integer> voucherIdList){
+    public Event(int id, String name, String short_description, int image, int voucher_quantity, int voucher_use, Date start_date, Date end_date, int brand_id, int game_id,int num_of_turn, String guideline, List<Integer> voucherIdList){
         this.id = id;
         this.name = name;
         this.short_description = short_description;
@@ -26,10 +27,19 @@ public class Event {
         this.voucher_use = voucher_use;
         this.start_date = start_date;
         this.end_date = end_date;
+        this.num_of_turn = num_of_turn;
         this.brand_id = brand_id;
         this.game_id = game_id;
         this.guideline = guideline;
         this.voucherIdList = voucherIdList;
+    }
+
+    public int getNum_of_turn() {
+        return num_of_turn;
+    }
+
+    public void setNum_of_turn(int num_of_turn) {
+        this.num_of_turn = num_of_turn;
     }
 
     public int getId() {

@@ -11,8 +11,10 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vou.Model.Event;
+import com.example.vou.Model.Game;
 import com.example.vou.Model.Voucher;
 import com.example.vou.R;
+import com.example.vou.Singleton.GameSingleton;
 import com.example.vou.VoucherDetailActivity;
 
 import java.time.temporal.Temporal;
@@ -58,7 +60,14 @@ public class BrandEventAdapter extends RecyclerView.Adapter<BrandEventAdapter.Br
         public void bindData(Event data) {
             brandEventImage.setImageResource(data.getImage());
             brandEventName.setText(data.getName());
-            
+            Game game = GameSingleton.getInstance().getGame(data.getGame_id());
+            brandEventGenre.setText(game.getName_type());
+            brandEventPlayNow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
         }
     }
 }

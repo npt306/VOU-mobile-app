@@ -27,6 +27,9 @@
         <activity android:name=".MyVoucherActivity"/>
         <activity android:name=".VoucherDetailActivity"/>
         <activity android:name=".QRCodeActivity"/>
+        <activity android:name=".BrandEventActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".EditProfileActivity"/>
 
     </application>
 

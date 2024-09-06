@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shake_phone_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_2">
+
+    <ImageView
+        android:id="@+id/shake_phone_back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/background_back_button"
+        android:layout_marginEnd="11dp"/>
+
+    <ImageView
+        android:id="@+id/shake_phone_event_information"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="#FFFFFF"
+        android:layout_marginEnd="11dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Shake phone game" />
+
+        <ImageView
+            android:id="@+id/shake_phone_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shake the phone to start"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shake_phone_number_of_turn"
+            android:text="You have 2 plays left for this event"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</RelativeLayout>

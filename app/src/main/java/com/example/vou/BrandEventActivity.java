@@ -12,10 +12,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.vou.Adapter.BrandEventAdapter;
+import com.example.vou.Adapter.HomeVoucherAdapter;
 import com.example.vou.Model.Brand;
+import com.example.vou.Model.Event;
 import com.example.vou.Model.Voucher;
+import com.example.vou.Singleton.EventSingleton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BrandEventActivity extends AppCompatActivity {
     private Context context;
@@ -55,6 +63,10 @@ public class BrandEventActivity extends AppCompatActivity {
 
         brandEventTitle.setText(brand.getName());
 
+        List<Event> brandEventList = EventSingleton.getInstance().getEventListBrand(brand.getId());
 
+        BrandEventAdapter brandEventAdapter = new BrandEventAdapter(brandEventList);
+        brandEventRecyclerView.setAdapter(brandEventAdapter);
+        brandEventRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

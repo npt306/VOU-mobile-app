@@ -25,9 +25,9 @@ public class HomeHotEventAdapter extends RecyclerView.Adapter<HomeHotEventAdapte
     }
     @Override
     public void onBindViewHolder(HomeHotEventViewHolder holder, int position){
-        holder.event_image.setImageResource(events.get(position).getImageResourceId());
-        holder.event_name.setText(events.get(position).getEventName());
-        holder.event_sale.setText(events.get(position).getEventSale());
+        holder.event_image.setImageResource(events.get(position).getImage());
+        holder.event_name.setText(events.get(position).getName());
+        holder.event_sale.setText(events.get(position).getShort_description());
     }
     @Override
     public int getItemCount(){

@@ -43,7 +43,6 @@
                 android:id="@+id/item_brand_event_genre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:text="Sale"
                 android:textSize="14sp"
                 android:textColor="@android:color/black"

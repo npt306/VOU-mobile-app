@@ -16,6 +16,7 @@ import com.example.vou.GameShakePhoneActivity;
 import com.example.vou.Model.Event;
 import com.example.vou.Model.Game;
 import com.example.vou.Model.Voucher;
+import com.example.vou.QuizGameActivity;
 import com.example.vou.R;
 import com.example.vou.Singleton.GameSingleton;
 import com.example.vou.VoucherDetailActivity;
@@ -72,7 +73,9 @@ public class BrandEventAdapter extends RecyclerView.Adapter<BrandEventAdapter.Br
                 public void onClick(View view) {
                     Intent intent = null;
                     if(data.getGame_id() == 1){
-
+                        intent = new Intent(context, QuizGameActivity.class);
+                        intent.putExtra("event_data", data);
+                        context.startActivity(intent);
                     }
                     else if(data.getGame_id() == 2){
                         intent = new Intent(context, GameShakePhoneActivity.class);

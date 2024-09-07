@@ -32,6 +32,8 @@
         <activity android:name=".EditProfileActivity"/>
         <activity android:name=".GameShakePhoneActivity"/>
         <activity android:name=".EventDetailActivity"/>
+        <activity android:name=".QuizGameActivity"/>
+
 
     </application>
 

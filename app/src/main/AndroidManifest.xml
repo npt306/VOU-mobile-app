@@ -30,6 +30,8 @@
         <activity android:name=".BrandEventActivity"/>
         <activity android:name=".ProfileActivity"/>
         <activity android:name=".EditProfileActivity"/>
+        <activity android:name=".GameShakePhoneActivity"/>
+        <activity android:name=".EventDetailActivity"/>
 
     </application>
 

@@ -1,6 +1,7 @@
 package com.example.vou;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,7 +32,7 @@ public class GameShakePhoneActivity extends AppCompatActivity {
             return insets;
         });
 
-        Event event = (Event) getIntent().getSerializableExtra("event");
+        Event event = (Event) getIntent().getSerializableExtra("event_data");
         context = this;
 
         backButton = findViewById(R.id.shake_phone_back_button);
@@ -53,7 +54,9 @@ public class GameShakePhoneActivity extends AppCompatActivity {
         eventDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(context, EventDetailActivity.class);
+                intent.putExtra("event_detail", event);
+                context.startActivity(intent);
             }
         });
     }

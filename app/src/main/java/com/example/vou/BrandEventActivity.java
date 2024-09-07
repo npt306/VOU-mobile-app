@@ -65,7 +65,7 @@ public class BrandEventActivity extends AppCompatActivity {
 
         List<Event> brandEventList = EventSingleton.getInstance().getEventListBrand(brand.getId());
 
-        BrandEventAdapter brandEventAdapter = new BrandEventAdapter(brandEventList);
+        BrandEventAdapter brandEventAdapter = new BrandEventAdapter(brandEventList, BrandEventActivity.this);
         brandEventRecyclerView.setAdapter(brandEventAdapter);
         brandEventRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

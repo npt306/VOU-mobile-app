@@ -37,4 +37,13 @@ public class GameSingleton {
         }
         return null;
     }
+
+    public int getGameType(int gameId){
+        for(int i = 0; i < gameList.size(); i++){
+            if(gameList.get(i).getId() == gameId ){
+                return gameList.get(i).getType();
+            }
+        }
+        return 0;
+    }
 }

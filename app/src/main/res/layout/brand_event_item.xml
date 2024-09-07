@@ -63,7 +63,7 @@
         android:layout_height="40dp"
         android:layout_weight="1"
         android:layout_gravity="center"
-        android:background="@drawable/icon_cart"
+        android:background="@drawable/icon_play"
         android:contentDescription="Item Image" />
 
 </LinearLayout>

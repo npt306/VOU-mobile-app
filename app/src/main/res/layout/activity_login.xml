@@ -55,7 +55,7 @@
 
     <View
         android:layout_width="0dp"
-        android:layout_height="64dp"/>
+        android:layout_height="16dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -88,8 +88,6 @@
             android:inputType="textPassword"
             android:background="@drawable/login_edittext_background" />
 
-
-
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
@@ -101,7 +99,7 @@
         android:text="Login"
          />
         <LinearLayout
-            android:layout_marginStart="22dp"
+            android:layout_marginStart="110dp"
             android:layout_marginTop="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

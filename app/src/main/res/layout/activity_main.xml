@@ -7,11 +7,12 @@
     android:background="@color/background_2">
     <ImageView
         android:id="@+id/ivHomeProfile"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="11dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
 
         android:background="@drawable/icon_profile"/>
     <LinearLayout
@@ -25,7 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
-            android:text="VOU APP" />
+            android:text="VOU APP"
+            android:textStyle="bold"/>
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchViewVoucher"
@@ -44,11 +46,15 @@
             android:id="@+id/homeVoucher"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal"
+            android:layout_margin="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Explore by category"/>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -59,12 +65,17 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:paddingStart="16dp"
-            android:paddingEnd="16dp" />
+            android:paddingEnd="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hot event"/>
+            android:textStyle="bold"
+            android:text="Hot event"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHomeHotVoucher"
@@ -74,9 +85,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:paddingStart="16dp"
-            android:paddingEnd="16dp" />
-
-
-
+            android:paddingEnd="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
     </LinearLayout>
 </RelativeLayout>

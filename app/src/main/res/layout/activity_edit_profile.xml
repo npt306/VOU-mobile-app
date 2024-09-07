@@ -25,13 +25,15 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
-            android:text="My voucher" />
+            android:text="My voucher"
+            android:textStyle="bold"/>
 
         <ImageView
             android:id="@+id/profileImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
+            android:layout_marginTop="16dp"
             android:background="#FFFFFF" />
 
         <EditText
@@ -39,8 +41,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edittext_background"
-            android:drawableLeft="@drawable/icon_email"
+            android:drawableLeft="@drawable/icon_username"
             android:drawablePadding="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:text="Nguyen Huynh Phu Qui" />
 
         <EditText
@@ -50,6 +55,9 @@
             android:background="@drawable/login_edittext_background"
             android:drawableLeft="@drawable/icon_email"
             android:drawablePadding="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:inputType="textEmailAddress"
             android:text="nhpqui@gmail.com" />
 
@@ -58,24 +66,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edittext_background"
-            android:drawableLeft="@drawable/icon_email"
+            android:drawableLeft="@drawable/icon_phone"
             android:drawablePadding="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:inputType="phone"
             android:text="0123456789" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gender: " />
+                android:layout_gravity="center"
+                android:text="Gender: "
+                android:textSize="18dp"/>
 
             <RadioGroup
                 android:id="@+id/genderRadioGroup"
-                android:layout_width="wrap_content"
+                android:layout_width="321dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -83,18 +99,21 @@
                     android:id="@+id/maleRadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Male" />
 
                 <RadioButton
                     android:id="@+id/femaleRadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Female" />
 
                 <RadioButton
                     android:id="@+id/otherRadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="Other" />
             </RadioGroup>
         </LinearLayout>
@@ -105,8 +124,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edittext_background"
-            android:drawableLeft="@drawable/icon_email"
+            android:drawableLeft="@drawable/icon_birthday"
             android:drawablePadding="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:inputType="none"
             android:focusable="false"
             android:text="Select your birthday" />
@@ -116,8 +138,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_edittext_background"
-            android:drawableLeft="@drawable/icon_email"
+            android:drawableLeft="@drawable/icon_fb_account"
             android:drawablePadding="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:inputType="none"
             android:focusable="false"
             android:text="Enter your Facebook account" />
@@ -126,21 +151,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
 
             <Button
                 android:id="@+id/edit_profile_cancel_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginStart="20dp"
                 android:background="@drawable/login_button_background"
                 android:text="Cancel" />
-
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"/>
             <Button
                 android:id="@+id/edit_profile_update_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/login_button_background"
                 android:text="Update" />
         </LinearLayout>

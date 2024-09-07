@@ -25,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
-            android:text="QR Code" />
+            android:text="QR Code"
+            android:textStyle="bold"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -36,19 +37,23 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:background="#FFFFFF"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/qr_code"/>
 
         <TextView
             android:id="@+id/QRCodeVoucherName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Voucher name"/>
+            android:text="KFC Voucher"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/QRCodeVoucherSale"
@@ -64,7 +69,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,7 +86,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,7 +96,7 @@
                 android:id="@+id/QRCodeDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="bla bla bla"/>
+                android:text="A voucher examiner reviews and processes applications for various types of government benefits, including education, health care, food, travel needs and military veterans' benefits, among others."/>
         </LinearLayout>
 
     </LinearLayout>

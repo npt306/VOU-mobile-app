@@ -7,7 +7,7 @@
     android:background="@color/background_2">
 
     <ImageView
-        android:id="@+id/voucherDetailBackButton"
+        android:id="@+id/profileBackButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="10dp"
@@ -25,17 +25,29 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
-            android:text="Voucher detail" />
+            android:text="Voucher Detail"
+            android:textStyle="bold"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
+        <ImageView
+            android:id="@+id/QRCode"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/qr_code"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,24 +58,14 @@
                 android:layout_height="wrap_content"
                 android:text="20%"/>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description: "/>
-            <TextView
-                android:id="@+id/voucherDetailDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="bla bla bla"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -74,22 +76,42 @@
                 android:layout_height="wrap_content"
                 android:text="1/1/2024"/>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "/>
+            <TextView
+                android:id="@+id/voucherDetailDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A voucher examiner reviews and processes applications for various types of government benefits, including education, health care, food, travel needs and military veterans' benefits, among others."/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
             <TextView
                 android:id="@+id/voucherDetailCode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_weight="1"
                 android:background="@drawable/background_search_voucher_bar"
                 android:gravity="center"
                 android:text="ASDFGD"/>
+
             <ImageView
                 android:id="@+id/voucherDetailCopy"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/icon_copy"
                 android:background="@drawable/background_copy_button"/>
         </LinearLayout>
@@ -98,12 +120,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_button_background"
-            android:text="Give a voucher"/>
+            android:text="Give a voucher"
+            android:layout_marginTop="10dp"/>
         <Button
             android:id="@+id/voucherDetailQR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_button_background"
-            android:text="QR"/>
+            android:layout_marginTop="10dp"
+            android:text="QR Code"/>
     </LinearLayout>
 </RelativeLayout>

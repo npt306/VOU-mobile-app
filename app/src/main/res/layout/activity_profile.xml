@@ -103,11 +103,11 @@
             android:gravity="start|center_vertical"/>
 
         <Button
-            android:id="@+id/profileEvent"
+            android:id="@+id/profileFavouriteEvent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="16dp"
-            android:text=" event"
+            android:text=" favourite event"
             android:drawableLeft="@drawable/icon_event"
             android:background="@drawable/login_button_background"
             android:layout_marginTop="16dp"

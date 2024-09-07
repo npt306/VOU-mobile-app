@@ -145,5 +145,9 @@ public class MainActivity extends AppCompatActivity {
         gameList.add(new Game(2, "Lucky shake", 102, 2, false, "Lucky shake", "Shake your phone to reveal rewards."));
         GameSingleton.getInstance().setGameList(gameList);
 
+        EventSingleton.getInstance().addFavouriteEvent(1);
+        EventSingleton.getInstance().addFavouriteEvent(2);
+        EventSingleton.getInstance().addFavouriteEvent(3);
+
     }
 }

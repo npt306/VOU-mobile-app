@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,6 +19,7 @@ import com.example.vou.Model.Game;
 import com.example.vou.Model.Voucher;
 import com.example.vou.QuizGameActivity;
 import com.example.vou.R;
+import com.example.vou.Singleton.EventSingleton;
 import com.example.vou.Singleton.GameSingleton;
 import com.example.vou.VoucherDetailActivity;
 
@@ -68,6 +70,12 @@ public class BrandEventAdapter extends RecyclerView.Adapter<BrandEventAdapter.Br
             brandEventName.setText(data.getName());
             Game game = GameSingleton.getInstance().getGame(data.getGame_id());
             brandEventGenre.setText(game.getName_type());
+            if(EventSingleton.getInstance().isFavouriteEvent(data.getId())){
+                brandEventFavourite.setImageResource(R.drawable.icon_favourite_2);
+            }
+            else {
+                brandEventFavourite.setImageResource(R.drawable.icon_favourite_1);
+            }
             brandEventPlayNow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -81,6 +89,21 @@ public class BrandEventAdapter extends RecyclerView.Adapter<BrandEventAdapter.Br
                         intent = new Intent(context, GameShakePhoneActivity.class);
                         intent.putExtra("event_data", data);
                         context.startActivity(intent);
+                    }
+                }
+            });
+            brandEventFavourite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(EventSingleton.getInstance().isFavouriteEvent(data.getId())){
+                        EventSingleton.getInstance().removeFavouriteEvent(data.getId());
+                        brandEventFavourite.setImageResource(R.drawable.icon_favourite_1);
+                        Toast.makeText(context, "Added event in favourite", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        EventSingleton.getInstance().addFavouriteEvent(data.getId());
+                        brandEventFavourite.setImageResource(R.drawable.icon_favourite_2);
+                        Toast.makeText(context, "Removed event out favourite", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

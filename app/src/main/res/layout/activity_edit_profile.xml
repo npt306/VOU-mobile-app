@@ -25,7 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
-            android:text="My voucher"
             android:textStyle="bold"/>
 
         <ImageView
@@ -46,7 +45,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:text="Nguyen Huynh Phu Qui" />
+            android:hint="Nguyen Huynh Phu Qui" />
 
         <EditText
             android:id="@+id/edit_profile_email"
@@ -59,7 +58,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:inputType="textEmailAddress"
-            android:text="nhpqui@gmail.com" />
+            android:hint="nhpqui@gmail.com" />
 
         <EditText
             android:id="@+id/edit_profile_phone"
@@ -72,7 +71,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:inputType="phone"
-            android:text="0123456789" />
+            android:hint="0123456789" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,7 +130,7 @@
             android:layout_marginEnd="20dp"
             android:inputType="none"
             android:focusable="false"
-            android:text="Select your birthday" />
+            android:hint="Select your birthday" />
 
         <EditText
             android:id="@+id/edit_profile_facebook_account"
@@ -145,7 +144,7 @@
             android:layout_marginEnd="20dp"
             android:inputType="none"
             android:focusable="false"
-            android:text="Enter your Facebook account" />
+            android:hint="Enter your Facebook account" />
 
 
         <LinearLayout

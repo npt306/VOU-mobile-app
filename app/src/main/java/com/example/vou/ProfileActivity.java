@@ -13,7 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ProfileActivity extends AppCompatActivity {
-    Button personalInfomationButton, friendButton, historyVoucherButton, myVoucherButton, eventButton;
+    Button personalInfomationButton, friendButton, historyVoucherButton, myVoucherButton, favouriteEventButton;
     ImageView backButton;
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -31,7 +31,7 @@ public class ProfileActivity extends AppCompatActivity {
         friendButton = findViewById(R.id.profileFriend);
         historyVoucherButton = findViewById(R.id.profileVoucherHistory);
         myVoucherButton = findViewById(R.id.profileMyVoucher);
-        eventButton = findViewById(R.id.profileEvent);
+        favouriteEventButton = findViewById(R.id.profileFavouriteEvent);
         backButton = findViewById(R.id.profileBackButton);
 
         personalInfomationButton.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +53,14 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ProfileActivity.this, MyVoucherActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        favouriteEventButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, FavouriteEventActivity.class);
                 startActivity(intent);
             }
         });

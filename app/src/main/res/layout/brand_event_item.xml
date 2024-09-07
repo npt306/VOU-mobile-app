@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="8dp"
+    android:background="#FFFFFF"
     android:id="@+id/item_brand_event"
     android:gravity="center">
 
@@ -55,7 +56,7 @@
         android:layout_height="40dp"
         android:layout_weight="1"
         android:layout_gravity="center"
-        android:background="@drawable/icon_cart"
+        android:background="@drawable/icon_favourite_1"
         android:contentDescription="Item Image" />
     <ImageView
         android:id="@+id/item_brand_event_play_now"

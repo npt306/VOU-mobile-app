@@ -29,6 +29,24 @@ public class EventSingleton {
         this.favouriteEventList = favouriteEventList;
     }
 
+    public void updateNumberOfTurn(int eventId, int number_of_turn){
+        for(int i = 0; i < eventList.size(); i++){
+            if(eventList.get(i).getId() == eventId){
+                eventList.get(i).setNum_of_turn(number_of_turn);
+                return;
+            }
+        }
+    }
+
+    public int getNumberOfTurn(int eventId){
+        for(int i = 0; i < eventList.size(); i++){
+            if(eventList.get(i).getId() == eventId){
+                return eventList.get(i).getNum_of_turn();
+            }
+        }
+        return 0;
+    }
+
     public void addFavouriteEvent(int eventId) {
         for (int i = 0; i < eventList.size(); i++) {
             if (eventList.get(i).getId() == eventId) {

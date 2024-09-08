@@ -123,14 +123,14 @@ public class MainActivity extends AppCompatActivity {
         calendar.set(2024, Calendar.NOVEMBER, 25);
         Date endDate3 = calendar.getTime();
         List<Event> eventList = new ArrayList<>();
-        eventList.add(new Event(1, "KFC Golden Week", "Get amazing discounts at KFC!", R.drawable.logo_kfc, 100, 20, startDate1, endDate1, 1, 1, 5,"Buy 1 get 1 free on selected items.", Arrays.asList(1001, 1002, 1003)));
-        eventList.add(new Event(2, "Lotteria Mega Deal", "Special offers at Lotteria.", R.drawable.logo_lotteria, 200, 50, startDate1, endDate1, 2, 2, 5, "Up to 50% off on all meals.", Arrays.asList(1004, 1005, 1006)));
-        eventList.add(new Event(3, "McDonald's Happy Days", "Enjoy delicious meals at McDonald's.", R.drawable.logo_mc_donald, 150, 30, startDate2, endDate2, 3, 1, 5, "Free fries with any burger purchase.", Arrays.asList(1007, 1008, 1009)));
-        eventList.add(new Event(4, "Starbucks Coffee Lover", "Exclusive discounts for coffee lovers.", R.drawable.logo_starbucks, 250, 100, startDate2, endDate2, 4, 2, 5, "Buy any coffee and get a second one at 50% off.", Arrays.asList(1010, 1011, 1012)));
-        eventList.add(new Event(5, "Jollibee Family Feast", "Big savings for the whole family at Jollibee.", R.drawable.logo_jollibee, 120, 25, startDate1, endDate2, 5, 1, 5, "Family meal deal with extra sides.", Arrays.asList(1013, 1014, 1015)));
-        eventList.add(new Event(6, "Pizza Hut Double Deal", "Get two large pizzas at a special price.", R.drawable.logo_pizza_hut, 180, 40, startDate2, endDate3, 6, 2, 5, "Order any large pizza and get the second one at 50% off.", Arrays.asList(1016, 1017, 1018)));
-        eventList.add(new Event(7, "Highlands Coffee Fest", "Enjoy a variety of coffees at Highlands.", R.drawable.logo_highlands, 220, 60, startDate3, endDate3, 7, 1, 5, "Buy one, get one free on selected coffee.", Arrays.asList(1019, 1020, 1021)));
-        eventList.add(new Event(8, "Gong Cha Bubble Mania", "Special offers on bubble tea at Gong Cha.", R.drawable.logo_gong_cha, 140, 35, startDate3, endDate3, 8, 2, 5, "Get a free topping with any drink.", Arrays.asList(1022, 1023, 1024)));
+        eventList.add(new Event(1, "KFC Golden Week", "Get amazing discounts at KFC!", R.drawable.logo_kfc, 100, 20, startDate1, endDate1, 1, 1, 5,"Buy 1 get 1 free on selected items.", Arrays.asList(1, 2, 3)));
+        eventList.add(new Event(2, "Lotteria Mega Deal", "Special offers at Lotteria.", R.drawable.logo_lotteria, 200, 50, startDate1, endDate1, 2, 2, 5, "Up to 50% off on all meals.", Arrays.asList(4, 5, 6)));
+        eventList.add(new Event(3, "McDonald's Happy Days", "Enjoy delicious meals at McDonald's.", R.drawable.logo_mc_donald, 150, 30, startDate2, endDate2, 3, 1, 5, "Free fries with any burger purchase.", Arrays.asList(7, 8, 9)));
+        eventList.add(new Event(4, "Starbucks Coffee Lover", "Exclusive discounts for coffee lovers.", R.drawable.logo_starbucks, 250, 100, startDate2, endDate2, 4, 2, 5, "Buy any coffee and get a second one at 50% off.", Arrays.asList(10, 11, 12)));
+        eventList.add(new Event(5, "Jollibee Family Feast", "Big savings for the whole family at Jollibee.", R.drawable.logo_jollibee, 120, 25, startDate1, endDate2, 5, 1, 5, "Family meal deal with extra sides.", Arrays.asList(13, 14, 15)));
+        eventList.add(new Event(6, "Pizza Hut Double Deal", "Get two large pizzas at a special price.", R.drawable.logo_pizza_hut, 180, 40, startDate2, endDate3, 6, 2, 5, "Order any large pizza and get the second one at 50% off.", Arrays.asList(16, 17, 18)));
+        eventList.add(new Event(7, "Highlands Coffee Fest", "Enjoy a variety of coffees at Highlands.", R.drawable.logo_highlands, 220, 60, startDate3, endDate3, 7, 1, 5, "Buy one, get one free on selected coffee.", Arrays.asList(19, 20, 21)));
+        eventList.add(new Event(8, "Gong Cha Bubble Mania", "Special offers on bubble tea at Gong Cha.", R.drawable.logo_gong_cha, 140, 35, startDate3, endDate3, 8, 2, 5, "Get a free topping with any drink.", Arrays.asList(12, 13, 14)));
         EventSingleton.getInstance().setEventList(eventList);
 
         List<Brand> brandList = new ArrayList<>();

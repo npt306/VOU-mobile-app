@@ -56,4 +56,5 @@
         android:layout_gravity="center"
         android:background="@drawable/icon_play"
         android:contentDescription="Item Image" />
+
 </LinearLayout>

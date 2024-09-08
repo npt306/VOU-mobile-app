@@ -20,6 +20,15 @@ public class VoucherSingleton {
         return instance;
     }
 
+    public Voucher getVoucher(int voucherId){
+        for(int i = 0; i < voucherList.size(); i++){
+            if(voucherList.get(i).getId() == voucherId){
+                return voucherList.get(i);
+            }
+        }
+        return null;
+    }
+
     public List<Voucher> getVoucherList() {
         return voucherList;
     }
@@ -52,6 +61,28 @@ public class VoucherSingleton {
             }
         }
     }
+
+    public void addVoucherFromGame(int voucherId){
+        for(int i = 0; i < voucherList.size(); i++){
+            if(voucherList.get(i).getId() == voucherId){
+                for(int j = 0; j < myVoucherList.size(); j++){
+                    if(myVoucherList.get(j).getId() == voucherId){
+                        if(myVoucherList.get(j).getType() == 2){
+                            int availablePieces = myVoucherList.get(j).getAvailablePieces();
+                            myVoucherList.get(j).setAvailablePieces(availablePieces + 1);
+                        }
+                        else {
+                            return;
+                        }
+                    }
+                }
+                myVoucherList.add(voucherList.get(i));
+                return;
+            }
+        }
+    }
+
+
 
     public void addHistoryVoucher(int voucherId){
         for(int i = 0; i < voucherList.size(); i++){

@@ -22,11 +22,13 @@ import com.example.vou.Model.Brand;
 import com.example.vou.Model.Event;
 import com.example.vou.Model.Game;
 import com.example.vou.Model.User;
+import com.example.vou.Model.Voucher;
 import com.example.vou.Singleton.BrandSingleton;
 import com.example.vou.Singleton.EventSingleton;
 import com.example.vou.Singleton.GameSingleton;
 import com.example.vou.Singleton.LoginSingleton;
 import com.example.vou.Singleton.UserSingleton;
+import com.example.vou.Singleton.VoucherSingleton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -181,5 +183,50 @@ public class MainActivity extends AppCompatActivity {
         UserSingleton.getInstance().addFriend(7);
         UserSingleton.getInstance().addFriend(9);
 
+        List<Voucher> voucherList  = new ArrayList<>();
+        voucherList.add(new Voucher(1,"KFC Breakfast Voucher", "GIE9CK", "Enjoy a delicious chicken breakfast at KFC with this voucher. Save 20% on your next morning meal.", new Date(2024,9,2), "20%"));
+        voucherList.add(new Voucher(2,"Starbucks Coffee Discount", "SBX4RT", "Get 15% off on any coffee order at Starbucks. Perfect for your morning or afternoon pick-me-up.", new Date(2024,9,15), "15%"));
+        voucherList.add(new Voucher(3,"Pizza Hut Large Pizza Deal", "PZHLRG", "Order a large pizza at Pizza Hut and get 25% off. Treat your friends and family!", new Date(2024,10,1), "25%"));
+        voucherList.add(new Voucher(4,"McDonald's Happy Meal", "MC1HAP", "Enjoy a Happy Meal at McDonald's with a 10% discount. Great for kids and adults alike.", new Date(2024,9,30), "10%"));
+        voucherList.add(new Voucher(5,"Subway Sandwich Special", "SBW3SP", "Buy any footlong sandwich at Subway and save 15%. A perfect deal for sandwich lovers.", new Date(2024,10,5), "15%"));
+        voucherList.add(new Voucher(6, "Burger King Whopper Deal", "BK9WHP", "Get 20% off on any Whopper at Burger King. Satisfy your hunger with a juicy burger.", new Date(2024,9,25), "20%",1,3));
+        voucherList.add(new Voucher(7, "Domino's Pizza Combo", "DMO7CB", "Order a pizza combo at Domino's and enjoy 30% off. Ideal for family dinners.", new Date(2024,10,10), "30%",2,3));
+        voucherList.add(new Voucher(8, "Dunkin' Donuts Coffee & Donut", "DD5CND", "Save 15% on any coffee and donut combo at Dunkin' Donuts. Start your day sweetly.", new Date(2024,9,12), "15%",1,3));
+        voucherList.add(new Voucher(9, "Taco Bell Meal Deal", "TCB9MD", "Get 20% off on any meal at Taco Bell. Perfect for a quick and tasty meal.", new Date(2024,9,22), "20%",3,3));
+        voucherList.add(new Voucher(10, "KFC Family Bucket", "KFC4FAM", "Enjoy a KFC Family Bucket with 25% off. A great deal for family gatherings.", new Date(2024,10,15), "25%",1,3));
+        voucherList.add(new Voucher(11, "Starbucks Frappuccino Discount", "SBXFRC", "Cool down with a 10% discount on any Frappuccino at Starbucks.", new Date(2024,9,18), "10%"));
+        voucherList.add(new Voucher(12, "McDonald's Big Mac Deal", "MC2BMC", "Get 15% off on any Big Mac at McDonald's. A classic burger at a great price.", new Date(2024,9,28), "15%"));
+        voucherList.add(new Voucher(13, "Pizza Hut Pasta Special", "PZHPST", "Order any pasta dish at Pizza Hut and save 20%. Perfect for pasta lovers.", new Date(2024,10,12), "20%"));
+        voucherList.add(new Voucher(14, "Subway Breakfast Combo", "SBW4BF", "Save 10% on any breakfast combo at Subway. Start your morning right.", new Date(2024,9,14), "10%"));
+        voucherList.add(new Voucher(15, "Burger King Breakfast Deal", "BK7BRF", "Enjoy 20% off on any breakfast item at Burger King. A great start to your day.", new Date(2024,9,26), "20%"));
+        voucherList.add(new Voucher(16, "Domino's Dessert Special", "DMO9DS", "Get 15% off on any dessert at Domino's. Perfect for satisfying your sweet tooth.", new Date(2024,10,8), "15%"));
+        voucherList.add(new Voucher(17, "Dunkin' Donuts Bagel & Coffee", "DD7BGC", "Save 20% on any bagel and coffee combo at Dunkin' Donuts.", new Date(2024,9,16), "20%"));
+        voucherList.add(new Voucher(18, "Taco Bell Burrito Deal", "TCB6BR", "Get 25% off on any burrito at Taco Bell. A deal too good to pass up.", new Date(2024,9,20), "25%"));
+        voucherList.add(new Voucher(19, "KFC Zinger Burger Special", "KFC6ZNG", "Enjoy 20% off on a Zinger Burger at KFC. Crispy and spicy, just the way you like it.", new Date(2024,10,1), "20%"));
+        voucherList.add(new Voucher(20, "Starbucks Tea Time Discount", "SBX9TEA", "Get 15% off on any tea at Starbucks. Relax with a refreshing cup of tea.", new Date(2024,9,24), "15%"));
+        voucherList.add(new Voucher(21, "McDonald's McFlurry Deal", "MC4MFL", "Save 10% on any McFlurry at McDonald's. A cool treat on a hot day.", new Date(2024,9,30), "10%"));
+        VoucherSingleton.getInstance().setVoucherList(voucherList);
+
+        VoucherSingleton.getInstance().addMyVoucher(1);
+        VoucherSingleton.getInstance().addMyVoucher(2);
+        VoucherSingleton.getInstance().addMyVoucher(3);
+        VoucherSingleton.getInstance().addMyVoucher(4);
+        VoucherSingleton.getInstance().addMyVoucher(5);
+        VoucherSingleton.getInstance().addMyVoucher(6);
+        VoucherSingleton.getInstance().addMyVoucher(7);
+        VoucherSingleton.getInstance().addMyVoucher(8);
+        VoucherSingleton.getInstance().addMyVoucher(9);
+        VoucherSingleton.getInstance().addMyVoucher(10);
+        VoucherSingleton.getInstance().addMyVoucher(11);
+        VoucherSingleton.getInstance().addMyVoucher(12);
+        VoucherSingleton.getInstance().addMyVoucher(13);
+        VoucherSingleton.getInstance().addMyVoucher(14);
+        VoucherSingleton.getInstance().addMyVoucher(15);
+
+        VoucherSingleton.getInstance().addHistoryVoucher(16);
+        VoucherSingleton.getInstance().addHistoryVoucher(17);
+        VoucherSingleton.getInstance().addHistoryVoucher(18);
+        VoucherSingleton.getInstance().addHistoryVoucher(19);
+        VoucherSingleton.getInstance().addHistoryVoucher(20);
     }
 }

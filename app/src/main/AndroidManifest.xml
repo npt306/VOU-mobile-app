@@ -35,6 +35,7 @@
         <activity android:name=".QuizGameActivity"/>
         <activity android:name=".FavouriteEventActivity"/>
         <activity android:name=".FriendActivity"/>
+        <activity android:name=".VoucherHistory"/>
     </application>
 
 </manifest>

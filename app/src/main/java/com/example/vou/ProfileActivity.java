@@ -72,5 +72,13 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        historyVoucherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, VoucherHistory.class);
+                startActivity(intent);
+            }
+        });
     }
 }

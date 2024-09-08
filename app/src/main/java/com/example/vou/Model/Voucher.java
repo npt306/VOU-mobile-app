@@ -23,8 +23,16 @@ public class Voucher implements Serializable {
     private int totalPieces;
     private int availablePieces;
 
-    public Voucher(String name, String code, String description, Date expiredDay, String sale){
-        this.id = 0;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Voucher(int id, String name, String code, String description, Date expiredDay, String sale){
+        this.id = id;
         this.code = code;
         this.name = name;
         this.image = R.drawable.icon_voucher_1;
@@ -39,8 +47,8 @@ public class Voucher implements Serializable {
         this.availablePieces = 0;
     }
 
-    public Voucher(String name, String code, String description, Date expiredDay, String sale, int availablePieces, int totalPieces){
-        this.id = 0;
+    public Voucher(int id,String name, String code, String description, Date expiredDay, String sale, int availablePieces, int totalPieces){
+        this.id = id;
         this.code = code;
         this.name = name;
         this.image = R.drawable.icon_voucher_2;

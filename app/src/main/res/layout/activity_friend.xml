@@ -48,5 +48,9 @@
             android:paddingEnd="16dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/test"/>
     </LinearLayout>
 </RelativeLayout>

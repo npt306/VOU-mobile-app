@@ -21,10 +21,12 @@ import com.example.vou.Adapter.HomeVoucherAdapter;
 import com.example.vou.Model.Brand;
 import com.example.vou.Model.Event;
 import com.example.vou.Model.Game;
+import com.example.vou.Model.User;
 import com.example.vou.Singleton.BrandSingleton;
 import com.example.vou.Singleton.EventSingleton;
 import com.example.vou.Singleton.GameSingleton;
 import com.example.vou.Singleton.LoginSingleton;
+import com.example.vou.Singleton.UserSingleton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -148,6 +150,36 @@ public class MainActivity extends AppCompatActivity {
         EventSingleton.getInstance().addFavouriteEvent(1);
         EventSingleton.getInstance().addFavouriteEvent(2);
         EventSingleton.getInstance().addFavouriteEvent(3);
+
+        List<User> users = new ArrayList<>();
+
+        users.add(new User(1, "johndoe", "johndoe@example.com", "John Doe", "password123", "1234567890", true, 1, 101, new Date(95, 4, 10), "facebook.com/johndoe"));
+        users.add(new User(2, "janedoe", "janedoe@example.com", "Jane Doe", "password456", "0987654321", false, 0, 102, new Date(98, 6, 15), "facebook.com/janedoe"));
+        users.add(new User(3, "mikesmith", "mikesmith@example.com", "Mike Smith", "password789", "9876543210", true, 1, 103, new Date(90, 11, 5), "facebook.com/mikesmith"));
+        users.add(new User(4, "annlee", "annlee@example.com", "Ann Lee", "password000", "1234509876", false, 0, 104, new Date(92, 9, 20), "facebook.com/annlee"));
+        users.add(new User(5, "bobjones", "bobjones@example.com", "Bob Jones", "password111", "1122334455", true, 1, 105, new Date(85, 2, 25), "facebook.com/bobjones"));
+        users.add(new User(6, "lucysky", "lucysky@example.com", "Lucy Sky", "password222", "9988776655", false, 0, 106, new Date(99, 7, 18), "facebook.com/lucysky"));
+        users.add(new User(7, "peterbrown", "peterbrown@example.com", "Peter Brown", "password333", "3344556677", true, 1, 107, new Date(87, 3, 12), "facebook.com/peterbrown"));
+        users.add(new User(8, "sarawhite", "sarawhite@example.com", "Sara White", "password444", "5566778899", false, 0, 108, new Date(93, 8, 8), "facebook.com/sarawhite"));
+        users.add(new User(9, "steveblack", "steveblack@example.com", "Steve Black", "password555", "6677889900", true, 1, 109, new Date(91, 1, 14), "facebook.com/steveblack"));
+        users.add(new User(10, "lisagreen", "lisagreen@example.com", "Lisa Green", "password666", "7788990011", false, 0, 110, new Date(96, 5, 22), "facebook.com/lisagreen"));
+        users.add(new User(11, "kevinblue", "kevinblue@example.com", "Kevin Blue", "password777", "2233445566", true, 1, 111, new Date(89, 10, 17), "facebook.com/kevinblue"));
+        users.add(new User(12, "emmared", "emmared@example.com", "Emma Red", "password888", "4433221100", false, 0, 112, new Date(97, 2, 9), "facebook.com/emmared"));
+        users.add(new User(13, "davidsilver", "davidsilver@example.com", "David Silver", "password999", "2345678901", true, 1, 113, new Date(86, 11, 13), "facebook.com/davidsilver"));
+        users.add(new User(14, "cindywhite", "cindywhite@example.com", "Cindy White", "password000", "9988007766", false, 0, 114, new Date(84, 4, 27), "facebook.com/cindywhite"));
+        users.add(new User(15, "markgreen", "markgreen@example.com", "Mark Green", "passwordabc", "1098765432", true, 1, 115, new Date(88, 7, 19), "facebook.com/markgreen"));
+        users.add(new User(16, "susantaylor", "susantaylor@example.com", "Susan Taylor", "passwordxyz", "3216549870", false, 0, 116, new Date(83, 12, 21), "facebook.com/susantaylor"));
+        users.add(new User(17, "charlesbrown", "charlesbrown@example.com", "Charles Brown", "passworddef", "8765432109", true, 1, 117, new Date(82, 6, 6), "facebook.com/charlesbrown"));
+        users.add(new User(18, "paularichards", "paularichards@example.com", "Paula Richards", "passwordghi", "5647382910", false, 0, 118, new Date(81, 9, 30), "facebook.com/paularichards"));
+        users.add(new User(19, "georgeyoung", "georgeyoung@example.com", "George Young", "passwordjkl", "0192837465", true, 1, 119, new Date(80, 10, 2), "facebook.com/georgeyoung"));
+        users.add(new User(20, "rachelblue", "rachelblue@example.com", "Rachel Blue", "passwordmno", "9876543012", false, 0, 120, new Date(79, 3, 5), "facebook.com/rachelblue"));
+        UserSingleton.getInstance().setUserList(users);
+
+        UserSingleton.getInstance().addFriend(1);
+        UserSingleton.getInstance().addFriend(3);
+        UserSingleton.getInstance().addFriend(5);
+        UserSingleton.getInstance().addFriend(7);
+        UserSingleton.getInstance().addFriend(9);
 
     }
 }
